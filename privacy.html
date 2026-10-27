@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Политика конфиденциальности — meetings</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #5c6370;
+    --line: #e4e6eb;
+    --accent: #1a73e8;
+    --card: #f7f8fa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181d;
+      --fg: #e8eaed;
+      --muted: #9aa0a6;
+      --line: #2c2f36;
+      --accent: #8ab4f8;
+      --card: #1e2127;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 56px 20px 80px; }
+  h1 { font-size: 1.8rem; line-height: 1.25; margin: 0 0 8px; letter-spacing: -0.02em; }
+  h2 { font-size: 1.1rem; margin: 36px 0 10px; letter-spacing: -0.01em; }
+  .updated { color: var(--muted); font-size: 0.9rem; margin: 0 0 32px; }
+  ul { padding-left: 22px; margin: 0 0 16px; }
+  li { margin-bottom: 8px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 24px 0;
+  }
+  a { color: var(--accent); }
+  code {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-size: 0.9em;
+    word-break: break-all;
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Политика конфиденциальности</h1>
+  <p class="updated">Сервис «meetings». Обновлено 27 октября 2026&nbsp;г.</p>
+
+  <p>«meetings» — бот, который записывает клиентов на демонстрацию продукта
+  через WhatsApp и создаёт встречи в Google&nbsp;Meet. Ниже описано, какие
+  данные он обрабатывает и зачем.</p>
+
+  <h2>Какие данные собираются</h2>
+  <ul>
+    <li><strong>Номер телефона WhatsApp</strong> и <strong>имя профиля</strong> —
+      чтобы понимать, кто записывается, и указать контакт в карточке встречи.</li>
+    <li><strong>Сообщения, адресованные боту</strong> — команда записи и номер
+      выбранного времени. Переписка с менеджером ботом не обрабатывается:
+      он реагирует только на свои команды.</li>
+    <li><strong>Выбранные дата и время встречи.</strong></li>
+  </ul>
+
+  <h2>Данные Google</h2>
+  <p>Приложение обращается к Google&nbsp;Calendar API от имени того сотрудника,
+  который сам подключил свой аккаунт, и использует разрешение
+  <code>https://www.googleapis.com/auth/calendar</code>, чтобы:</p>
+  <ul>
+    <li>узнать, какие интервалы в его календаре заняты, и предложить клиенту свободное время;</li>
+    <li>создать встречу со ссылкой на Google&nbsp;Meet;</li>
+    <li>удалить встречу, если клиент отменил запись.</li>
+  </ul>
+
+  <div class="card">
+    <p style="margin:0">Приложение <strong>не обращается к Google-аккаунтам клиентов</strong>
+    и не имеет к ним доступа. Содержимое событий календаря не читается и никуда
+    не передаётся — используются только отметки занятости по времени.</p>
+  </div>
+
+  <h2>Ограниченное использование данных Google</h2>
+  <p>Использование приложением информации, полученной из Google API,
+  соответствует
+  <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>,
+  включая требования Limited Use. Данные Google не используются для рекламы,
+  не продаются и не передаются третьим лицам; доступ людей к этим данным не
+  предоставляется, за исключением случаев, прямо разрешённых пользователем,
+  необходимых для обеспечения безопасности или требуемых законом.</p>
+
+  <h2>Где хранятся данные</h2>
+  <p>Токен доступа к Google и список созданных записей хранятся на сервере
+  оператора сервиса в виде файлов. Сторонние аналитические системы, рекламные
+  сети и трекеры не используются.</p>
+
+  <h2>Срок хранения и удаление</h2>
+  <p>Записи о встречах хранятся, пока они нужны для работы сервиса, и удаляются
+  по запросу. Чтобы удалить свои данные или отозвать согласие, напишите на
+  <a href="mailto:shymyrmanap07@gmail.com">shymyrmanap07@gmail.com</a>.</p>
+  <p>Сотрудник может в любой момент отозвать доступ приложения к своему
+  Google-аккаунту на странице
+  <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>
+  — после этого приложение перестанет обращаться к его календарю.</p>
+
+  <h2>Передача третьим лицам</h2>
+  <p>Данные не продаются и не передаются третьим лицам. Обработка происходит
+  только в сервисах, необходимых для работы: WhatsApp (доставка сообщений) и
+  Google Calendar&nbsp;/&nbsp;Meet (встречи).</p>
+
+  <h2>Контакты</h2>
+  <p><a href="mailto:shymyrmanap07@gmail.com">shymyrmanap07@gmail.com</a></p>
+
+  <footer>
+    <a href="index.html">← На главную</a>
+  </footer>
+
+</div>
+</body>
+</html>

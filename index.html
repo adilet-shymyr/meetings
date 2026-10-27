@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>meetings — запись на демо через WhatsApp</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #5c6370;
+    --line: #e4e6eb;
+    --accent: #1a73e8;
+    --card: #f7f8fa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181d;
+      --fg: #e8eaed;
+      --muted: #9aa0a6;
+      --line: #2c2f36;
+      --accent: #8ab4f8;
+      --card: #1e2127;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 56px 20px 80px; }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 12px; letter-spacing: -0.02em; }
+  h2 { font-size: 1.15rem; margin: 40px 0 12px; letter-spacing: -0.01em; }
+  .lead { font-size: 1.1rem; color: var(--muted); margin: 0 0 36px; }
+  ol, ul { padding-left: 22px; margin: 0 0 16px; }
+  li { margin-bottom: 8px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 24px 0;
+  }
+  a { color: var(--accent); }
+  footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  code {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-size: 0.9em;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>meetings</h1>
+  <p class="lead">Запись на демонстрацию продукта через WhatsApp — со ссылкой на Google&nbsp;Meet.</p>
+
+  <p>Это внутренний инструмент: бот принимает сообщения в WhatsApp, показывает
+  свободное время из календаря и создаёт встречу в Google&nbsp;Meet.</p>
+
+  <h2>Как это работает</h2>
+  <ol>
+    <li>Менеджер отправляет клиенту презентацию в WhatsApp.</li>
+    <li>Бот следом предлагает записаться на демонстрацию.</li>
+    <li>Клиент пишет <code>демо</code> и получает список свободных окон.</li>
+    <li>Клиент называет удобное время — бот создаёт встречу и присылает ссылку на Google&nbsp;Meet.</li>
+  </ol>
+
+  <div class="card">
+    <p style="margin:0"><strong>Доступ к Google.</strong> Приложение работает только
+    с календарём того сотрудника, который сам подключил свой аккаунт. К Google-аккаунтам
+    клиентов оно не обращается и доступа к ним не имеет.</p>
+  </div>
+
+  <h2>Контакты</h2>
+  <p>По вопросам работы сервиса — <a href="mailto:shymyrmanap07@gmail.com">shymyrmanap07@gmail.com</a>.</p>
+
+  <footer>
+    <a href="privacy.html">Политика конфиденциальности</a>
+  </footer>
+
+</div>
+</body>
+</html>
